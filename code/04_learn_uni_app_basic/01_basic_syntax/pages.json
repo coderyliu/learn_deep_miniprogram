@@ -1,0 +1,67 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/index",
+			"style": {
+				"navigationBarTitleText": "京号通"
+			}
+		}, {
+			"path": "pages/find/index",
+			"style": {
+				"navigationBarTitleText": "发现",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/person/index",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/appointment/index",
+			"style": {
+				"navigationBarTitleText": "门诊预约",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 60
+			}
+		}, {
+			"path": "pages/register/index",
+			"style": {
+				"navigationBarTitleText": "我的预约",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "#333",
+		"navigationBarTitleText": "京号通",
+		"navigationBarBackgroundColor": "#fefefe",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#666",
+		"selectedColor": "#65829f",
+		"list": [{
+				"text": "首页",
+				"pagePath": "pages/home/index",
+				"iconPath": "static/images/home.png",
+				"selectedIconPath": "static/images/select-home.png"
+			},
+			{
+				"text": "发现",
+				"pagePath": "pages/find/index",
+				"iconPath": "static/images/find.png",
+				"selectedIconPath": "static/images/select-find.png"
+			},
+			{
+				"text": "我的",
+				"pagePath": "pages/person/index",
+				"iconPath": "static/images/person.png",
+				"selectedIconPath": "static/images/select-person.png"
+			}
+		]
+	}
+}

@@ -1,0 +1,3 @@
+/* ***.scss文件中引入其它scss文件的方式：既可以通过相对路径来引入，也可以通过绝对路径 */
+@import './base.scss';
+// @import '@/static/scss/base.scss'
