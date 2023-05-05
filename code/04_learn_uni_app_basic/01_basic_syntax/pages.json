@@ -9,7 +9,8 @@
 			"path": "pages/find/index",
 			"style": {
 				"navigationBarTitleText": "发现",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 60
 			}
 
 		}, {
@@ -32,11 +33,44 @@
 				"navigationBarTitleText": "我的预约",
 				"enablePullDownRefresh": false
 			}
-
+		},
+		{
+			"path": "pages/department/index",
+			"style": {
+				"navigationBarTitleText": "科室列表",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/article/index",
+			"style": {
+				"navigationBarTitleText": "文章详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/hospital/index",
+			"style": {
+				"navigationBarTitleText": "医院详情",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/search/index",
+			"style": {
+				"navigationBarTitleText": "相关门诊",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/doctor-list/index",
+			"style": {
+				"navigationBarTitleText": "医生列表",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 60
+			}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "#333",
+		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "京号通",
 		"navigationBarBackgroundColor": "#fefefe",
 		"backgroundColor": "#F8F8F8"

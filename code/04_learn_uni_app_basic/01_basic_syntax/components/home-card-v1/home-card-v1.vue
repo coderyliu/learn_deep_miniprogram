@@ -2,7 +2,7 @@
 	<view class="home-card-v1-wrap" @click="handleCardClick" :style="{ color: color, backgroundColor: backgroundColor }">
 		<view class="left">
 			<text class="title">{{ title }}</text>
-			<text class="subtitle" v-if="isShowSubTitle">{{ subtitle }}</text>
+			<text class="subtitle omit" v-if="isShowSubTitle">{{ subtitle }}</text>
 		</view>
 		<view class="right"><image :src="imgPath" mode="widthFix" class="img"></image></view>
 	</view>
@@ -66,7 +66,7 @@ const handleCardClick = () => {
 
 	.right {
 		.img {
-			width: 60px;
+			width: 50px;
 		}
 	}
 }

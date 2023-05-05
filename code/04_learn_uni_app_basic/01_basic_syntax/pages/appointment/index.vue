@@ -1,7 +1,7 @@
 <template>
 	<view class="hos-list-wrap">
 		<template v-for="item in hosList" :key="item.id">
-			<hos-card-v1 :data-info="item"></hos-card-v1>
+			<hos-card-v1 :dataInfo="item"></hos-card-v1>
 		</template>
 	</view>
 </template>

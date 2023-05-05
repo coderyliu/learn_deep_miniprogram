@@ -5,11 +5,15 @@ import {
 import {
 	getHomeBannerListFetch
 } from '@/api/home.js';
+import {
+	getArticleListFetch
+} from '@/api/find.js'
 
 const useHomeStore = defineStore('home', {
 	state() {
 		return {
-			bannerList: []
+			bannerList: [],
+			articleList: []
 		}
 	},
 	actions: {
@@ -24,6 +28,23 @@ const useHomeStore = defineStore('home', {
 			} catch (e) {
 				return uni.showToast({
 					title: '网络异常',
+					icon: "error",
+					duration: 1500
+				})
+			}
+		},
+		async changeArticleListAction() {
+			try {
+				const res = await getArticleListFetch()
+				if (res.data.code === 1) {
+					this.articleList = res.data.data?.result
+				} else {
+					throw new Error('error')
+				}
+			} catch (e) {
+				return uni.showToast({
+					title: '网络异常',
+					icon: 'error',
 					duration: 1500
 				})
 			}

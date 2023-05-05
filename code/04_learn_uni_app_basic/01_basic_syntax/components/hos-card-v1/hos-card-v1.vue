@@ -1,17 +1,17 @@
 <template>
 	<view class="hos-card-wrap" @click="handleHosItemClick">
 		<view class="item-left">
-			<view class="top-title omit">{{ dataInfo.name }}</view>
+			<view class="top-title omit">{{ dataInfo?.name }}</view>
 			<view class="bottom-desc">
 				<view class="levelText">
-					<text class="text">{{ levelIdToText(dataInfo.levelText) }}</text>
+					<text class="text">{{ levelIdToText(dataInfo?.levelText) }}</text>
 				</view>
 				<view class="openTimeText">
-					<text class="text">每天{{ dataInfo.openTimeText }}放号</text>
+					<text class="text">每天{{ dataInfo?.openTimeText }}放号</text>
 				</view>
 			</view>
 		</view>
-		<view class="item-right"><image class="picture" :src="dataInfo.picture" mode="widthFix" /></view>
+		<view class="item-right"><image class="picture" :src="dataInfo?.picture" mode="widthFix" /></view>
 	</view>
 </template>
 
@@ -25,7 +25,11 @@ const props = defineProps({
 	}
 });
 
-const handleHosItemClick = () => {};
+const handleHosItemClick = () => {
+	uni.navigateTo({
+		url: `/pages/hospital/index?hosId=${props.dataInfo?.id}`
+	});
+};
 </script>
 
 <style lang="scss">
@@ -63,7 +67,7 @@ const handleHosItemClick = () => {};
 			}
 		}
 	}
-	
+
 	.item-right .picture {
 		width: 160rpx;
 	}

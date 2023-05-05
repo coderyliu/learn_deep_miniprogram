@@ -57,3 +57,26 @@ export const commonDepList = [{
 		imgPath: "../../static/images/erke.png",
 	},
 ];
+
+// 医院详情页nav bar
+export const hosNavBarList = [{
+		name: "科室列表",
+		value: "dep",
+	},
+	{
+		name: "医院详情",
+		value: "detail",
+	},
+	{
+		name: "预约须知",
+		value: "know",
+	},
+	{
+		name: "停诊信息",
+		value: "notice",
+	},
+	{
+		name: "意见反馈",
+		value: "feedback",
+	},
+];
