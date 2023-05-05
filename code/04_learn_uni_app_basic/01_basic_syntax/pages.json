@@ -5,7 +5,8 @@
 			"style": {
 				"navigationBarTitleText": "京号通"
 			}
-		}, {
+		},
+		{
 			"path": "pages/find/index",
 			"style": {
 				"navigationBarTitleText": "发现",
@@ -13,7 +14,8 @@
 				"onReachBottomDistance": 60
 			}
 
-		}, {
+		},
+		{
 			"path": "pages/person/index",
 			"style": {
 				"navigationBarTitleText": "个人中心",
@@ -27,7 +29,8 @@
 				"enablePullDownRefresh": true,
 				"onReachBottomDistance": 60
 			}
-		}, {
+		},
+		{
 			"path": "pages/register/index",
 			"style": {
 				"navigationBarTitleText": "我的预约",
@@ -40,7 +43,8 @@
 				"navigationBarTitleText": "科室列表",
 				"enablePullDownRefresh": false
 			}
-		}, {
+		},
+		{
 			"path": "pages/article/index",
 			"style": {
 				"navigationBarTitleText": "文章详情",
@@ -53,7 +57,8 @@
 				"navigationBarTitleText": "医院详情",
 				"enablePullDownRefresh": false
 			}
-		}, {
+		},
+		{
 			"path": "pages/search/index",
 			"style": {
 				"navigationBarTitleText": "相关门诊",
@@ -66,6 +71,71 @@
 				"navigationBarTitleText": "医生列表",
 				"enablePullDownRefresh": true,
 				"onReachBottomDistance": 60
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录中心",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/about/index",
+			"style": {
+				"navigationBarTitleText": "关于我们",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/feedback/index",
+			"style": {
+				"navigationBarTitleText": "系统反馈",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/account/index",
+			"style": {
+				"navigationBarTitleText": "账户管理",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/private/index",
+			"style": {
+				"navigationBarTitleText": "隐私权限",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/service/index",
+			"style": {
+				"navigationBarTitleText": "服务协议",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/real/index",
+			"style": {
+				"navigationBarTitleText": "实名认证",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/balance/index",
+			"style": {
+				"navigationBarTitleText": "账户余额",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/patient/index",
+			"style": {
+				"navigationBarTitleText": "我的就诊人",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/history/index",
+			"style": {
+				"navigationBarTitleText": "交易记录"
 			}
 		}
 	],

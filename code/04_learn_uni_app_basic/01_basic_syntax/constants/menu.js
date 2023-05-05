@@ -80,3 +80,49 @@ export const hosNavBarList = [{
 		value: "feedback",
 	},
 ];
+
+// 个人中心系统功能field
+export const systemFieldList = [{
+		title: "关于我们",
+		value: "about",
+		imgPath: "../../static/images/about.png",
+	},
+	{
+		title: "意见反馈",
+		value: "feedback",
+		imgPath: "../../static/images/feedback.png",
+	},
+	{
+		title: "账号管理",
+		value: "account",
+		imgPath: "../../static/images/account.png",
+	},
+	{
+		title: "隐私权限",
+		value: "private",
+		imgPath: "../../static/images/private.png",
+	},
+	{
+		title: "服务协议",
+		value: "service",
+		imgPath: "../../static/images/service.png",
+	},
+];
+
+// 个人中心用户功能field
+export const userFieldList = [{
+		title: "待就诊",
+		value: "wait",
+		imgPath: "../../static/images/schedule.png",
+	},
+	{
+		title: "已完成",
+		value: "finish",
+		imgPath: "../../static/images/finish.png",
+	},
+	{
+		title: "已取消",
+		value: "cancel",
+		imgPath: "../../static/images/cancel.png",
+	},
+];
