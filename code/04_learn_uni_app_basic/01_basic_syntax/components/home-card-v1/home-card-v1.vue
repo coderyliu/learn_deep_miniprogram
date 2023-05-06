@@ -9,6 +9,13 @@
 </template>
 
 <script setup>
+import { storeToRefs } from 'pinia';
+
+import useMainStore from '@/store/main.js';
+
+const mainStore = useMainStore();
+const { token } = storeToRefs(mainStore);
+
 const props = defineProps({
 	title: String,
 	subtitle: String,
@@ -27,6 +34,18 @@ const props = defineProps({
 
 // 卡片点击
 const handleCardClick = () => {
+	if (props.url === '/pages/patient/index' && !token.value) {
+		return uni.navigateTo({
+			url: '/pages/login/index'
+		});
+	}
+
+	if (props.url === '/pages/register/index' && !token.value) {
+		return uni.navigateTo({
+			url: '/pages/login/index'
+		});
+	}
+
 	uni.navigateTo({
 		url: props.url
 	});

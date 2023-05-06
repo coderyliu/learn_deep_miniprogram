@@ -1,5 +1,6 @@
 // 定义一个网络请求类
 const BASE_URL = 'http://www.coderyliu.online:3001'
+// const BASE_URL = 'http://127.0.0.1:3003'
 const TIMEOUT = 1000 * 30
 
 class LyRequest {
@@ -13,6 +14,19 @@ class LyRequest {
 			title: 'loading...',
 			mask: true,
 		})
+
+		try {
+			const userInfo = uni.getStorageSync("userInfo");
+			if (userInfo) {
+				header["userId"] = JSON.parse(userInfo).id;
+			}
+
+			const tokenAuth = uni.getStorageSync("token");
+			if (tokenAuth) {
+				header["authorization"] = JSON.parse(tokenAuth);
+			}
+		} catch (error) {}
+
 		return new Promise((resolve, reject) => {
 			uni.request({
 				url: this.baseurl + url,

@@ -8,7 +8,10 @@ import {
 	getHosKnowInfoFetch,
 	getHosDetailInfoFetch,
 	getHosDepartmentListFetch,
-	getHosDoctorListFetch
+	getHosDoctorListFetch,
+	getHosRegScheduleListFecth,
+	getDoctorInfoFetch,
+	getDoctorDutyInfoFetch,
 } from '@/api/hos.js'
 
 const useHosStore = defineStore('hos', {
@@ -21,7 +24,13 @@ const useHosStore = defineStore('hos', {
 			ruleInfo: {},
 			depList: [],
 			doctorTotal: 0,
-			doctorList: []
+			doctorList: [],
+			scheduleTotal: 0,
+			scheduleList: [],
+			doctorInfo: {},
+			dutyInfo: {},
+			columnList: [],
+			timeList: [],
 		}
 	},
 	actions: {
@@ -130,6 +139,68 @@ const useHosStore = defineStore('hos', {
 				return uni.showToast({
 					title: '网络异常',
 					icon: "error",
+					duration: 1500
+				})
+			}
+		},
+		async changeScheduleListAction(payload) {
+			try {
+				const res = await getHosRegScheduleListFecth(payload)
+
+				if (res.data.code === 1) {
+					this.scheduleList = res.data.data?.result
+					this.scheduleTotal = res.data.data?.total
+				} else {
+					throw new Error('error')
+				}
+			} catch (e) {
+				return uni.showToast({
+					title: '网络异常',
+					icon: "error",
+					duration: 1500
+				})
+			}
+		},
+		async changDoctorInfoAction(doctorId) {
+			try {
+				const res = await getDoctorInfoFetch(doctorId)
+
+				if (res.data.code === 1) {
+					this.doctorInfo = res.data?.data[0]
+				} else {
+					throw new Error('error')
+				}
+			} catch (e) {
+				return uni.showToast({
+					title: '网络异常',
+					icon: 'error',
+					duration: 1500
+				})
+			}
+		},
+		async changDoctorDutyInfoAction(doctorId, time) {
+			try {
+				const res = await getDoctorDutyInfoFetch(doctorId, time)
+
+				if (res.data.code === 1) {
+					let columnList = [];
+					if (res.data?.data[0]?.mSurplus && res.data?.data[0]?.aSurplus) {
+						columnList = ["上午", "下午"];
+					} else if (res.data?.data[0]?.mSurplus) {
+						columnList = ["上午"];
+					} else if (res.data?.data[0]?.aSurplus) {
+						columnList = ["下午"];
+					}
+
+					this.dutyInfo = res.data?.data[0]
+					this.timeList = columnList
+				} else {
+					throw new Error('error')
+				}
+			} catch (e) {
+				return uni.showToast({
+					title: '网络异常',
+					icon: 'error',
 					duration: 1500
 				})
 			}

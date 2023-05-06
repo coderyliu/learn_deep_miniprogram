@@ -34,7 +34,8 @@
 			"path": "pages/register/index",
 			"style": {
 				"navigationBarTitleText": "我的预约",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 60
 			}
 		},
 		{
@@ -76,7 +77,7 @@
 		{
 			"path": "pages/login/index",
 			"style": {
-				"navigationBarTitleText": "登录中心",
+				"navigationBarTitleText": "登录",
 				"enablePullDownRefresh": false
 			}
 		},
@@ -135,7 +136,23 @@
 		{
 			"path": "pages/history/index",
 			"style": {
-				"navigationBarTitleText": "交易记录"
+				"navigationBarTitleText": "交易记录",
+				"onReachBottomDistance": 60,
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/detail/index",
+			"style": {
+				"navigationBarTitleText": "医生详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/reg/index",
+			"style": {
+				"navigationBarTitleText": "预约挂号",
+				"enablePullDownRefresh": true
 			}
 		}
 	],

@@ -73,8 +73,21 @@ function regStateToText(state) {
 	return text;
 }
 
+// 挂号订单页顶部导航栏对应map
+const regTextToId = {
+	"全部": 'all',
+	"已取消": 0,
+	"挂号成功": 1,
+	"已取号": 2,
+	"已完成": 3,
+	"停诊": 4,
+	"爽约": 5,
+	"退款中": 6,
+}
+
 export {
 	levelIdToText,
 	roleIdToText,
 	regStateToText,
+	regTextToId
 };

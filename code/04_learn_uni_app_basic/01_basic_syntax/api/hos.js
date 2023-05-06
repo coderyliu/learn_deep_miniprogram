@@ -37,7 +37,7 @@ export const addHosFeedbackFetch = (data) => {
 
 // 根据医生Id请求医生详细信息
 export const getDoctorInfoFetch = (doctorId) => {
-	return lyReuqest.request(`/hos/doctor/info/${doctorId}`, "get");
+	return lyReuqest.request(`/hos/doctor/info/${doctorId}`, "GET");
 };
 
 // 根据医生Id和时间请求医生当天是否有排班

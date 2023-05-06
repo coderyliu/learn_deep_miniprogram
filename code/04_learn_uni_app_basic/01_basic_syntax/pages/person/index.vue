@@ -54,6 +54,7 @@
 <script setup>
 import { ref } from 'vue';
 import { storeToRefs } from 'pinia';
+import { onShow } from '@dcloudio/uni-app';
 
 import useMainStore from '@/store/main.js';
 import { systemFieldList, userFieldList } from '@/constants/menu.js';
@@ -128,6 +129,24 @@ const handleSystemItemClick = type => {
 			break;
 	}
 };
+
+onShow(() => {
+	try {
+		const token = uni.getStorageSync('token');
+		const userInfo = uni.getStorageSync('userInfo');
+
+		if (token) {
+			isLogin.value = true;
+			mainStore.changeTokenAction(JSON.parse(token));
+		}
+
+		if (userInfo) {
+			mainStore.changeUserInfoAction(JSON.parse(userInfo));
+		}
+	} catch (e) {
+		return;
+	}
+});
 </script>
 
 <style lang="scss">

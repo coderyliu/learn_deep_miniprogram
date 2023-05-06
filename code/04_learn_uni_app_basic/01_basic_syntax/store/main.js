@@ -6,9 +6,15 @@ const useMainStore = defineStore('main', {
 	state() {
 		return {
 			token: '',
-			userInfo: {
-				name: "coderyliu"
-			}
+			userInfo: {}
+		}
+	},
+	actions: {
+		async changeTokenAction(payload) {
+			this.token = payload
+		},
+		async changeUserInfoAction(payload) {
+			this.userInfo = payload
 		}
 	}
 })

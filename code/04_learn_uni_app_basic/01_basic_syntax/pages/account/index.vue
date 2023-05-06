@@ -44,6 +44,11 @@ const handleAccountItemClick = e => {
 			uni.switchTab({
 				url: '/pages/home/index'
 			});
+			return uni.showToast({
+				title: '退出登录成功',
+				icon: 'success',
+				duration: 1500
+			});
 			break;
 		default:
 			break;

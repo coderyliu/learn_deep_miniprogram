@@ -32,7 +32,11 @@ const props = defineProps({
 });
 
 // 点击预约
-const handleRegBtnClick = () => {};
+const handleRegBtnClick = () => {
+	uni.navigateTo({
+		url: `/pages/detail/index?doctorId=${props.dataInfo?.id}`
+	});
+};
 </script>
 
 <style lang="scss">

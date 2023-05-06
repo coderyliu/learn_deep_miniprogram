@@ -126,3 +126,49 @@ export const userFieldList = [{
 		imgPath: "../../static/images/cancel.png",
 	},
 ];
+
+// 挂号订单页顶部导航栏
+export const registerNavBarList = [{
+		name: "全部",
+		value: "all",
+	},
+	{
+		name: "已取消",
+		value: 0,
+	},
+	{
+		name: "挂号成功",
+		value: 1,
+	},
+	{
+		name: "已取号",
+		value: 2,
+	},
+	{
+		name: "已完成",
+		value: 3,
+	},
+	{
+		name: "停诊",
+		value: 4,
+	},
+	{
+		name: "爽约",
+		value: 5,
+	},
+	{
+		name: "退款中",
+		value: 6,
+	},
+];
+
+// 交易记录顶部导航栏
+export const rechargeNavBarList = [{
+		name: "充值订单",
+		value: "pay",
+	},
+	{
+		name: "挂号订单",
+		value: "reg",
+	},
+];
