@@ -8,14 +8,17 @@
 		<!-- 卡片区域 -->
 		<view class="card-list-wrap">
 			<template v-for="item in homeCardList" :key="item.title">
-				<home-card-v1 :title="item.title" :subtitle="item.subtitle" :imgPath="item.imgPath" :url="item.url" :backgroundColor="item.backgroundColor"></home-card-v1>
+				<home-card-v1 :title="item.title" :subtitle="item.subtitle" :imgPath="item.imgPath" :url="item.url"
+					:backgroundColor="item.backgroundColor"></home-card-v1>
 			</template>
 		</view>
 		<!-- 轮播图 swiper -->
 		<!-- 标签中的属性遵循的是vue中的规范v-bind v-model v-on v-slot等 -->
 		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000">
 			<template v-for="item in bannerList" :key="item.id">
-				<swiper-item style="border-radius: 10rpx;"><image :src="item.picture" mode="widthFix" class="banner-picture"></image></swiper-item>
+				<swiper-item style="border-radius: 10rpx;">
+					<image :src="item.picture" mode="widthFix" class="banner-picture"></image>
+				</swiper-item>
 			</template>
 		</swiper>
 		<!-- 常见科室 -->
@@ -133,6 +136,7 @@ page {
 			}
 		}
 	}
+
 	.article-list-wrap {
 		.article-list {
 			margin-top: 20rpx;

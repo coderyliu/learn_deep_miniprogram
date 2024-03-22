@@ -13,8 +13,8 @@ Page({
       title: "数据正在加载中...",
     });
     this.setData({
-        isLoading:true
-    })
+      isLoading: true,
+    });
     wx.request({
       url: "https://www.escook.cn/api/color",
       method: "GET",
@@ -23,7 +23,7 @@ Page({
           colorList: [...this.data.colorList, ...res.data.data],
         });
       },
-      complete:()=> {
+      complete: () => {
         this.setData({
           isLoading: false,
         });

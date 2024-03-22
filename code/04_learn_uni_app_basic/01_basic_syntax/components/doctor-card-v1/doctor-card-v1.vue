@@ -1,7 +1,9 @@
 <template>
 	<view class="doctor-card-wrap" @click="handleRegBtnClick">
 		<view class="top-info-wrap">
-			<view class="left-avatar"><image :src="dataInfo?.avatar" mode="heightFix" class="avatar"></image></view>
+			<view class="left-avatar">
+				<image :src="dataInfo?.avatar" mode="heightFix" class="avatar"></image>
+			</view>
 			<view class="right-desc">
 				<view class="person-info">
 					<text class="doctor-name omit">{{ dataInfo?.doctorName }}</text>
@@ -27,7 +29,7 @@ import { roleIdToText } from '@/utils/mapIdToText.js';
 const props = defineProps({
 	dataInfo: {
 		type: Object,
-		default: () => {}
+		default: () => { }
 	}
 });
 
@@ -58,6 +60,7 @@ const handleRegBtnClick = () => {
 			height: 120rpx;
 
 			margin-right: 30rpx;
+
 			.avatar {
 				height: 100%;
 				border-radius: 10rpx;

@@ -33,7 +33,8 @@
 			<view class="title">信息填写</view>
 			<view class="select-wrap">
 				<view class="section-title">就诊人</view>
-				<picker mode="selector" @change="handlePickerChange($event, 'patient')" :value="selectIndex" :range="columnList">
+				<picker mode="selector" @change="handlePickerChange($event, 'patient')" :value="selectIndex"
+					:range="columnList">
 					<view class="picker">当前选择：{{ columnList[selectIndex] }}</view>
 				</picker>
 			</view>
@@ -164,6 +165,7 @@ page {
 			align-items: center;
 
 			margin-bottom: 20rpx;
+
 			.avatar {
 				width: 100rpx;
 
@@ -223,6 +225,7 @@ page {
 
 		background-color: #fff;
 		box-sizing: border-box;
+
 		.select-wrap {
 			display: flex;
 			align-items: center;

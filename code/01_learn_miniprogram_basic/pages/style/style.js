@@ -4,7 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-      params:{}
+    params: {},
   },
 
   //   get请求
@@ -43,8 +43,8 @@ Page({
     //   this.getInfo()
     //   this.postInfo()
     this.setData({
-        params:options
-    })
+      params: options,
+    });
   },
 
   /**

@@ -4,7 +4,9 @@
 		<!-- 科室列表区域 -->
 		<view class="hos-info-wrap" v-if="currentTab === '科室列表'">
 			<view class="top-info-wrap">
-				<view class="item-left"><image class="picture" :src="detailInfo.picture" mode="widthFix" /></view>
+				<view class="item-left">
+					<image class="picture" :src="detailInfo.picture" mode="widthFix" />
+				</view>
 				<view class="item-right">
 					<view class="top-title omittwo">{{ detailInfo.name }}</view>
 					<view class="bottom-desc">
@@ -26,7 +28,8 @@
 		<view class="dep-wrap" v-if="currentTab === '科室列表'">
 			<view class="left-aside">
 				<template v-for="(item, index) in depList" :key="item.id">
-					<view :class="[index === currentAsideIndex ? 'aside-item active omit' : 'aside-item omit']" @click="handleAsideItemClick(index)">{{ item.name }}</view>
+					<view :class="[index === currentAsideIndex ? 'aside-item active omit' : 'aside-item omit']"
+						@click="handleAsideItemClick(index)">{{ item.name }}</view>
 				</template>
 			</view>
 			<view class="right-content">
@@ -44,7 +47,8 @@
 			<rich-text class="content" :nodes="detailInfo?.content"></rich-text>
 		</view>
 		<!-- 预约须知 -->
-		<view class="content-info-wrap" v-if="currentTab === '预约须知'"><rich-text class="content" :nodes="knowInfo?.article"></rich-text></view>
+		<view class="content-info-wrap" v-if="currentTab === '预约须知'"><rich-text class="content"
+				:nodes="knowInfo?.article"></rich-text></view>
 		<!-- 停诊通知 -->
 		<view class="notice-wrap" v-if="currentTab === '停诊信息'">
 			<template v-for="(item, index) in scheduleList" :key="index">
@@ -64,14 +68,9 @@
 		<!-- 医院反馈 -->
 		<view class="feedback-wrap" v-if="currentTab === '意见反馈'">
 			<view class="feedback-title">医院挂号服务意见反馈</view>
-			<textarea
-				:value="feedbackContent"
-				@input="handleTextAreaInput"
+			<textarea :value="feedbackContent" @input="handleTextAreaInput"
 				style="width:100%;height:300rpx;padding:20rpx;border:1px solid #d9d9d9;margin-top:20rpx;border-radius: 10rpx;box-sizing: border-box;"
-				:maxlength="300"
-				placeholder="请输入您的意见，我们会根据您的反馈认真改进"
-				placeholder-style="font-size:28rpx;"
-			/>
+				:maxlength="300" placeholder="请输入您的意见，我们会根据您的反馈认真改进" placeholder-style="font-size:28rpx;" />
 			<view class="sent-btn" @click="handleSendFeedback">递交意见</view>
 		</view>
 	</view>
@@ -213,6 +212,7 @@ onLoad(option => {
 			align-items: center;
 
 			margin-bottom: 40rpx;
+
 			.item-right {
 				flex: 1;
 
@@ -241,11 +241,13 @@ onLoad(option => {
 
 			.item-left {
 				width: 160rpx;
+
 				.picture {
 					width: 100%;
 				}
 			}
 		}
+
 		.show-btn {
 			display: flex;
 			justify-content: center;
@@ -263,6 +265,7 @@ onLoad(option => {
 			}
 		}
 	}
+
 	.bottom-info-wrap {
 		.reg-title {
 			padding-left: 30rpx;
@@ -290,6 +293,7 @@ onLoad(option => {
 			border-right: 2rpx solid #eee;
 
 			box-sizing: border-box;
+
 			.aside-item {
 				height: 60rpx;
 				line-height: 60rpx;
@@ -317,6 +321,7 @@ onLoad(option => {
 
 	.content-info-wrap {
 		margin-top: 30rpx;
+
 		.content-title {
 			margin-bottom: 20rpx;
 

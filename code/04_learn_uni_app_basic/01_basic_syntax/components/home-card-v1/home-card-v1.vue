@@ -4,7 +4,9 @@
 			<text class="title">{{ title }}</text>
 			<text class="subtitle omit" v-if="isShowSubTitle">{{ subtitle }}</text>
 		</view>
-		<view class="right"><image :src="imgPath" mode="widthFix" class="img"></image></view>
+		<view class="right">
+			<image :src="imgPath" mode="widthFix" class="img"></image>
+		</view>
 	</view>
 </template>
 

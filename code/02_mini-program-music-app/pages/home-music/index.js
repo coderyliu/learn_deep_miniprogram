@@ -24,7 +24,7 @@ Page({
     avatarUrl: "",
   },
   onLoad(options) {
-    //   获取轮播图数据
+    // 获取轮播图数据
     getMusicBanner().then((res) => {
       this.setData({
         bannerList: res.banners,

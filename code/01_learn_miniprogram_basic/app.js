@@ -1,6 +1,5 @@
 // app.js
-
-//实现promiseify，把wx宿主环境提供给我们所有的回调函数转成promise的形式，解决回到地狱
+// 实现promiseify，把wx宿主环境提供给我们所有的回调函数转成promise的形式，解决回调地狱
 // import { promisify } from "miniprogram-api-promise";
 
 // const wxp = (wx.p = {});

@@ -1,8 +1,7 @@
-<!--pages/basic/basic.wxml-->
+<!-- pages/basic/basic.wxml -->
 <!-- <text>pages/basic/basic.wxml</text> -->
-
-<!-- 1-数据绑定的方式 只有mustache双大括号语法，但是绑定的内容很多，包括内容，属性等-->
-<!-- 1.1mustache双大括号语法 绑定data中的数据-->
+<!-- 1-数据绑定的方式 只有mustache双大括号语法，但是绑定的内容很多，包括内容，属性等 -->
+<!-- 1.1mustache双大括号语法 绑定data中的数据 -->
 <!-- <view>{{mes}}</view> -->
 
 <!-- 1.2绑定标签上的属性 -->
@@ -24,7 +23,6 @@
 <!-- 1.6mustache语法内使用路径运算和逻辑判断 -->
 <!-- <view>{{friends.name}}</view> -->
 
-
 <!-- 2-事件绑定的方式  常用的主要是tap点击  input表单  change状态改变 -->
 <!-- 通过bindtap或者bind:tap的方式实现绑定，并且绑定的时候不能通过()方式传递参数 -->
 <!-- 要通过data-*的形式传参，在event.target.dataset中拿到参数 -->
@@ -40,7 +38,7 @@
 <!-- 这样传递的是data中的数据 -->
 <!-- <button type="primary" bindtap='incrementN' data-num='{{num}}'>+2</button> -->
 
-<!--2.2wxml中的事件冒泡  和html中的一样-->
+<!-- 2.2wxml中的事件冒泡  和html中的一样 -->
 <!-- <view class="computed" bindtap='incrementF'>
     <text>{{counter}}</text>
     <button type="primary" size="default" bindtap='incrementEvent'>+1</button>
@@ -52,7 +50,7 @@
     <button type="primary" size="default" catchtap='incrementEvent'>+1</button>
 </view> -->
 
-<!-- 2.4事件捕获 和html中的一样 可以用capture-catch取消事件捕获-->
+<!-- 2.4事件捕获 和html中的一样 可以用capture-catch取消事件捕获 -->
 <!-- capture:bind用来专门处理捕获事件优先执行 -->
 <!-- <view id="outer" bind:touchstart="handleTap1" capture-bind:touchstart="handleTap2">
   outer view
@@ -60,7 +58,6 @@
     inner view
   </view>
 </view> -->
-
 <!-- 如果将上面代码中的第一个capture-bind改为capture-catch，将只触发handleTap2。 -->
 <!-- <view id="outer" bind:touchstart="handleTap1" capture-catch:touchstart="handleTap2">
   outer view
@@ -86,7 +83,7 @@
     <view>{{mes}}</view>
 </block> -->
 
-<!-- 3.3使用hidden属性来控制元素显示  true隐藏  false显示-->
+<!-- 3.3使用hidden属性来控制元素显示  true隐藏  false显示 -->
 <!-- 他和wx:if的区别就是v-if和v-show 的区别 -->
 <!-- <view hidden="{{!isShow}}">{{mes}}</view> -->
 <!-- <view hidden="{{isShow}}">{{mes}}</view> -->
@@ -105,6 +102,7 @@
 <!-- <view wx:for='curry' wx:key='item'>{{item}}</view> -->
 
 <!-- 4.5wx:key不要加双大括号，默认就是item中的某一项 -->
+
 <!-- 4.6结合block进行列表渲染 -->
 <!-- <block wx:for='{{movies}}' wx:key='name'>
     <view>{{item.name}}</view>
@@ -113,47 +111,39 @@
 
 <!-- 4.7注意事项:花括号和引号之间如果有空格，将最终被解析成为字符串 -->
 <!-- <view wx:for='{{[1,2,3]}} '>{{item}}</view> -->
-
 <!-- 等价于 -->
 <!-- <view wx:for="{{[1,2,3] + ' '}}" >
   {{item}}
 </view> -->
-
 <!-- 补充：mustache语法绑定对象以及template模板的使用 -->
 <template name="app">
-    <view>
-        <!-- 这里面的name,str是通过调用template模板传递过来的，有自己的作用域 -->
-        <text>{{name}}</text>
-        <image src='{{urlStr}}'></image>
-    </view>
+  <view>
+    <!-- 这里面的name,str是通过调用template模板传递过来的，有自己的作用域 -->
+    <text>{{name}}</text>
+    <image src='{{urlStr}}'></image>
+  </view>
 </template>
-
 <!-- is属性是使用相应的模板，根据template上的name属性值一样   data属性是给template模板传递参数  data中的属性来自于.js中的data -->
 <!-- <template is='app' data='{{name,urlStr}}'></template> -->
-
 <!-- <template is='app'  data='{{name:mes}}'></template> -->
-<!--最后相当于合并成为一个对象  -->
-<!-- {name:hello curry}  ，也可以用...扩展运算符-->
-
+<!-- 最后相当于合并成为一个对象 -->
+<!-- {name:hello curry}  ，也可以用...扩展运算符 -->
 <!-- <template is='app' data='{{...obj1}}'></template> -->
 <!-- 如果有多个对象，后面的相同的属性会覆盖前面的 -->
-
 <!-- is 属性可以使用 Mustache 语法，来动态决定具体需要渲染哪个模板： -->
 <template name="odd">
-  <view> odd </view>
+  <view>odd</view>
 </template>
 <template name="even">
-  <view> even </view>
+  <view>even</view>
 </template>
-
 <!-- <block wx:for="{{[1, 2, 3, 4, 5]}}">
   <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
 </block> -->
 
 <!-- 5-wxml文件引用方式  import 和 include -->
-<!-- import可以在该文件中使用目标文件定义的template ,只能引用目标文件中的template-->
+<!-- import可以在该文件中使用目标文件定义的template ,只能引用目标文件中的template -->
 <!-- include可以将目标文件除了template，wxs外的整个代码引入 -->
 <import src='/pages/list/list.wxml'></import>
 <template is='app2' data='{{mes}}'></template>
-
 <!-- <include src='/pages/index/index.wxml'></include> -->

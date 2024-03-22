@@ -20,10 +20,10 @@ Page({
       { name: "战狼2", prices: 78 },
       { name: "变形金刚", prices: 88 },
     ],
-    obj1:{
-        name:'kobe',
-        age:40
-    }
+    obj1: {
+      name: "kobe",
+      age: 40,
+    },
   },
 
   //   事件绑定

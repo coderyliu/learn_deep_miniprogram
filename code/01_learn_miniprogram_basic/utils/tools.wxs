@@ -9,5 +9,5 @@ function splitPhone(str) {
 }
 
 module.exports = {
-  splitPhone:splitPhone
+  splitPhone: splitPhone,
 };

@@ -1,4 +1,4 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
     <!-- <view class="userinfo">
         <block wx:if="{{canIUseOpenData}}">
@@ -30,13 +30,10 @@
     <!-- </test2> -->
     <!-- <test2 bind:myevent='addNumber' msg='{{motto}}'></test2> -->
     <!-- <view>父组件计数:{{count}}</view> -->
-
-    <!-- 方式二:通过this.selectComponent()方法 ,必须通过id或class选择器-->
+    <!-- 方式二:通过this.selectComponent()方法 ,必须通过id或class选择器 -->
     <test2 id='test'></test2>
     <!-- <button bind:tap='getInstance'>获取自组件实例</button> -->
     <!-- <van-button type='primary'>点击</van-button> -->
-
-
     <!-- 全局状态管理的案例 -->
     <!-- <view>{{numA}}+{{numB}}={{sum}}</view> -->
     <!-- <van-button bind:tap='increment' data-num='{{1}}' type='primary'>+1</van-button> -->

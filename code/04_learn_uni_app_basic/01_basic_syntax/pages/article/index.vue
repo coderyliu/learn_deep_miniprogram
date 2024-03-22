@@ -27,6 +27,7 @@ onLoad(option => {
 
 	background-color: #fff;
 	box-sizing: border-box;
+
 	.article-title {
 		margin-bottom: 10rpx;
 
@@ -34,13 +35,13 @@ onLoad(option => {
 		font-weight: 700;
 		letter-spacing: 2rpx;
 	}
-	
+
 	.origin-title {
 		color: #47bff7;
 		font-size: 24rpx;
 		letter-spacing: 1rpx;
 	}
-	
+
 	.article-content {
 		line-height: 52rpx;
 		margin-top: 20rpx;

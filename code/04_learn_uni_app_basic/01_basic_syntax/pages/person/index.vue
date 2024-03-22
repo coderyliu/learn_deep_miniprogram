@@ -2,7 +2,9 @@
 	<view class="person-wrap">
 		<!-- 顶部登录区域 -->
 		<view class="login-wrap">
-			<view class="left-avatar"><image class="avatar" src="../../static/images/person-avatar.png" mode="widthFix"></image></view>
+			<view class="left-avatar">
+				<image class="avatar" src="../../static/images/person-avatar.png" mode="widthFix"></image>
+			</view>
 			<view class="right-info">
 				<view class="login-title" v-if="!isLogin" @click="handleLoginClick">点击登录</view>
 				<view class="phone-num" v-else>{{ userInfo?.phone }}</view>
@@ -11,15 +13,10 @@
 		</view>
 		<!-- 就诊人、收藏 -->
 		<view class="card-wrap">
-			<home-card-v1
-				title="我的就诊人"
-				url="/pages/patient/index"
-				color="#333"
-				backgroundColor="#fff"
-				:isShowSubtitle="false"
-				imgPath="../../static/images/patient.png"
-			></home-card-v1>
-			<home-card-v1 title="我的关注" color="#333" backgroundColor="#fff" :isShowSubtitle="false" imgPath="../../static/images/collect.png"></home-card-v1>
+			<home-card-v1 title="我的就诊人" url="/pages/patient/index" color="#333" backgroundColor="#fff" :isShowSubtitle="false"
+				imgPath="../../static/images/patient.png"></home-card-v1>
+			<home-card-v1 title="我的关注" color="#333" backgroundColor="#fff" :isShowSubtitle="false"
+				imgPath="../../static/images/collect.png"></home-card-v1>
 		</view>
 		<!-- 底部功能区域 -->
 		<view class="bottom-wrap">
@@ -165,6 +162,7 @@ page {
 			.left-avatar {
 				width: 160rpx;
 				height: 130rpx;
+
 				.avatar {
 					width: 100%;
 					height: 100%;
@@ -177,6 +175,7 @@ page {
 				margin-left: 30rpx;
 
 				letter-spacing: 2rpx;
+
 				.login-title {
 					font-size: 40rpx;
 					font-weight: 700;

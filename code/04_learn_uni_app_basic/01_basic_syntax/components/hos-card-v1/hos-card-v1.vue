@@ -11,7 +11,9 @@
 				</view>
 			</view>
 		</view>
-		<view class="item-right"><image class="picture" :src="dataInfo?.picture" mode="widthFix" /></view>
+		<view class="item-right">
+			<image class="picture" :src="dataInfo?.picture" mode="widthFix" />
+		</view>
 	</view>
 </template>
 
@@ -21,7 +23,7 @@ import { levelIdToText } from '@/utils/mapIdToText.js';
 const props = defineProps({
 	dataInfo: {
 		type: Object,
-		default: () => {}
+		default: () => { }
 	}
 });
 
@@ -62,6 +64,7 @@ const handleHosItemClick = () => {
 
 			color: #999;
 			font-size: 28rpx;
+
 			.openTimeText {
 				margin-left: 60rpx;
 			}

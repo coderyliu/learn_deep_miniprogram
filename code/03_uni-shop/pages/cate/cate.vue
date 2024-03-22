@@ -4,7 +4,8 @@
 		<cate-search class="search"></cate-search>
 		<!-- 左侧侧边栏 -->
 		<scroll-view scroll-y="true" class="aside-list" :style="{ height: asideHeight + 'rpx' }">
-			<view v-for="(item, index) in cateList" :key="item.cat_id" class="aside-item" @click="navigateToContent(index)" :class="{ active: currentIndex === index ? true : false }">
+			<view v-for="(item, index) in cateList" :key="item.cat_id" class="aside-item" @click="navigateToContent(index)"
+				:class="{ active: currentIndex === index ? true : false }">
 				<text class="font">{{ item.cat_name }}</text>
 			</view>
 		</scroll-view>
@@ -17,7 +18,8 @@
 				</view>
 				<!-- 渲染第二层级 -->
 				<view class="content-item" v-if="currentIndex !== 29">
-					<view class="content-list" v-for="(item2, index2) in item.children" :key="item2.cat_id" @click="gotoCartList(item2.cat_id)">
+					<view class="content-list" v-for="(item2, index2) in item.children" :key="item2.cat_id"
+						@click="gotoCartList(item2.cat_id)">
 						<image :src="item2.cat_icon" mode="widthFix" class="pic"></image>
 						<text>{{ item2.cat_name }}</text>
 					</view>
@@ -68,6 +70,7 @@ export default {
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: top;
+
 	.search {
 		position: absolute;
 		width: 100%;
@@ -75,11 +78,13 @@ export default {
 		top: -2rpx;
 		left: 0;
 	}
+
 	.aside-list {
 		flex-basic: 200rpx;
 		flex: 1;
 		background-color: #eee;
 		margin-top: 120rpx;
+
 		.aside-item {
 			width: 100%;
 			height: 120rpx;
@@ -87,40 +92,47 @@ export default {
 			text-align: center;
 		}
 	}
+
 	.content {
 		flex: 3;
 		background-color: #fff;
 		margin-top: 120rpx;
+
 		.title {
 			width: 100%;
 			height: 110rpx;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
 			.text {
 				font-size: 38rpx;
 				font-weight: bolf;
 				color: #333;
 			}
 		}
+
 		.content-item {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-around;
 			align-items: center;
+
 			.content-list {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 			}
+
 			.pic {
 				width: 150rpx;
 			}
 		}
 	}
 }
+
 .active {
 	background-color: white;
 }

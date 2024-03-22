@@ -2,7 +2,8 @@
 	<view class="dep-wrap">
 		<view class="left-aside">
 			<template v-for="(item, index) in depList" :key="item.id">
-				<view :class="[index === currentAsideIndex ? 'aside-item active omit' : 'aside-item omit']" @click="handleAsideItemClick(index)">{{ item.name }}</view>
+				<view :class="[index === currentAsideIndex ? 'aside-item active omit' : 'aside-item omit']"
+					@click="handleAsideItemClick(index)">{{ item.name }}</view>
 			</template>
 		</view>
 		<view class="right-content">
@@ -58,6 +59,7 @@ onMounted(() => {
 		&::-webkit-scrollbar {
 			display: none;
 		}
+
 		.aside-item {
 			height: 60rpx;
 			line-height: 60rpx;

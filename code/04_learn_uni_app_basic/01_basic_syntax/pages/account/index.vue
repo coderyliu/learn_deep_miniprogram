@@ -1,6 +1,8 @@
 <template>
 	<view class="account-wrap">
-		<view class="top-logo"><image src="../../static/images/logo-app.png" mode="widthFix" class="logo"></image></view>
+		<view class="top-logo">
+			<image src="../../static/images/logo-app.png" mode="widthFix" class="logo"></image>
+		</view>
 		<view class="bottom-list" @click="handleAccountItemClick">
 			<view class="list-item" id="real">实名认证</view>
 			<view class="list-item" id="account">修改账户信息</view>
@@ -49,7 +51,6 @@ const handleAccountItemClick = e => {
 				icon: 'success',
 				duration: 1500
 			});
-			break;
 		default:
 			break;
 	}
@@ -69,6 +70,7 @@ page {
 			height: 400rpx;
 
 			background-color: #fff;
+
 			.logo {
 				width: 350rpx;
 			}

@@ -136,6 +136,7 @@ page {
 
 				.money {
 					padding: 20rpx 0;
+
 					.num {
 						color: red;
 					}

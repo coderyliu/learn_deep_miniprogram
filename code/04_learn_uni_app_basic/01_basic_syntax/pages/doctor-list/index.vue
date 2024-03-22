@@ -55,16 +55,19 @@ onReachBottom(() => {
 <style lang="scss">
 page {
 	background-color: #f6f7f9;
+
 	.doctor-list-wrap {
 		width: 100%;
 
 		box-sizing: border-box;
+
 		.list-wrap {
 			width: 100%;
 			padding: 30rpx 40rpx;
 
 			box-sizing: border-box;
 		}
+
 		.tip-text {
 			height: 100vh;
 			margin-top: 80rpx;

@@ -3,7 +3,9 @@
 		<view class="person-info">
 			<view class="title">个人介绍</view>
 			<view class="top-doctor-info">
-				<view class="avatar-wrap"><image :src="doctorInfo?.avatar" mode="widthFix" class="picture"></image></view>
+				<view class="avatar-wrap">
+					<image :src="doctorInfo?.avatar" mode="widthFix" class="picture"></image>
+				</view>
 				<view class="hos-info">
 					<view class="hos-name" @click="handleHosClick">{{ doctorInfo?.hosName }}</view>
 					<view class="doctor-info">
@@ -19,7 +21,8 @@
 		</view>
 		<view class="duty-wrap">
 			<view class="title">出诊信息</view>
-			<view class="hos-name omit" style="margin-bottom:10rpx; color:#666;font-size: 28rpx;">出诊医院：{{ doctorInfo?.hosName }}</view>
+			<view class="hos-name omit" style="margin-bottom:10rpx; color:#666;font-size: 28rpx;">出诊医院：{{ doctorInfo?.hosName
+				}}</view>
 			<view class="dep-name omit" style="color:#666;font-size: 28rpx;">出诊科室：{{ doctorInfo?.DepTwoName }}</view>
 			<view class="duty-list">
 				<template v-for="(item, index) in appointmentList" :key="index">

@@ -8,14 +8,8 @@
 		<template v-if="!isSendCaptcha">
 			<view class="field-wrap">
 				<view class="label">手机号码</view>
-				<input
-					type="text"
-					@input="handleBindKeyInput($event, 'phone')"
-					class="phone-field"
-					:maxlength="20"
-					placeholder="请输入您的手机号"
-					placeholder-style="color:#777;font-size:28rpx;"
-				/>
+				<input type="text" @input="handleBindKeyInput($event, 'phone')" class="phone-field" :maxlength="20"
+					placeholder="请输入您的手机号" placeholder-style="color:#777;font-size:28rpx;" />
 			</view>
 			<view class="agree-wrap">
 				<checkbox-group @change="handleCheckBoxChange">
@@ -36,14 +30,8 @@
 					<view class="label">输入验证码</view>
 					<!-- <captcha-cpn bind:captchaClick="handleSendCaptcha"></captcha-cpn> -->
 				</view>
-				<input
-					type="text"
-					@input="handleBindKeyInput($event, 'code')"
-					class="phone-field"
-					:maxlength="6"
-					placeholder="请输入六位数验证码"
-					placeholder-style="color:#777;font-size:28rpx;letter-spacing:2rpx;"
-				/>
+				<input type="text" @input="handleBindKeyInput($event, 'code')" class="phone-field" :maxlength="6"
+					placeholder="请输入六位数验证码" placeholder-style="color:#777;font-size:28rpx;letter-spacing:2rpx;" />
 			</view>
 			<view class="login-btn" @click="handleLoginClick">登录</view>
 		</template>

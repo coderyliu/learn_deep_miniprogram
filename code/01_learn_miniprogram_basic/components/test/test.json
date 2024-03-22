@@ -1,6 +1,6 @@
 {
-    "component": true,
-    "usingComponents": {
-        "test": "/components/test02/test02"
-    }
+  "component": true,
+  "usingComponents": {
+    "test": "/components/test02/test02"
+  }
 }

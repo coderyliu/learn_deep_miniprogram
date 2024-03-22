@@ -3,7 +3,9 @@
 		<template v-for="item in depList" :key="item.hosId">
 			<view class="card-item">
 				<view class="top-info-wrap">
-					<view class="item-left"><image class="picture" :src="item.picture" mode="widthFix" /></view>
+					<view class="item-left">
+						<image class="picture" :src="item.picture" mode="widthFix" />
+					</view>
 					<view class="item-right">
 						<view class="top-title omit">{{ item.hosName }}</view>
 						<view class="bottom-desc">
@@ -73,6 +75,7 @@ page {
 
 				padding-bottom: 20rpx;
 				border-bottom: 2rpx solid #eee;
+
 				.item-right {
 					flex: 1;
 
@@ -93,10 +96,12 @@ page {
 						color: #999;
 						font-size: 28rpx;
 					}
+
 					.openTimeText {
 						margin-left: 60rpx;
 					}
 				}
+
 				.item-left .picture {
 					width: 160rpx;
 				}
@@ -123,6 +128,7 @@ page {
 				}
 			}
 		}
+
 		.tip-text {
 			line-height: 300rpx;
 

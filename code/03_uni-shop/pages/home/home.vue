@@ -3,7 +3,8 @@
 		<!-- 搜索框 -->
 		<cate-search class="search"></cate-search>
 		<!-- 轮播图区域 -->
-		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true" class="swiper-banner">
+		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true"
+			class="swiper-banner">
 			<swiper-item v-for="(item, index) in swiperList" :key="item.goods_id" class="swiper-list">
 				<navigator :url="'/subpackage/goods_detail/goods_detail?goods_id=' + item.goods_id" class="swiper-item">
 					<image :src="item.image_src" mode="widthFix" class="avatar"></image>
@@ -19,15 +20,20 @@
 		<!-- 楼层区域 -->
 		<view class="floor-list" v-for="(item, index) in floorList" :key="item.floor_title.name">
 			<!-- 楼层图片 -->
-			<view class="floor-title"><image :src="item.floor_title.image_src" mode="widthFix" class="pic"></image></view>
+			<view class="floor-title">
+				<image :src="item.floor_title.image_src" mode="widthFix" class="pic"></image>
+			</view>
 			<!-- 楼层内容 -->
 			<view class="floor-content">
 				<navigator class="floor-left" :url="item.product_list[0].url">
-					<image :src="item.product_list[0].image_src" mode="widthFix" :style="{ width: item.product_list[0].image_width + 'rpx' }" class="floor-pic"></image>
+					<image :src="item.product_list[0].image_src" mode="widthFix"
+						:style="{ width: item.product_list[0].image_width + 'rpx' }" class="floor-pic"></image>
 				</navigator>
 				<view class="floor-right">
-					<navigator v-for="(item2, index2) in item.product_list" :key="item2.name" class="right" v-if="index2 !== 0" :url="item2.url">
-						<image :src="item2.image_src" mode="widthFix" class="pict" :style="{ width: item2.image_width + 'rpx' }"></image>
+					<navigator v-for="(item2, index2) in item.product_list" :key="item2.name" class="right" v-if="index2 !== 0"
+						:url="item2.url">
+						<image :src="item2.image_src" mode="widthFix" class="pict" :style="{ width: item2.image_width + 'rpx' }">
+						</image>
 					</navigator>
 				</view>
 			</view>
@@ -96,27 +102,33 @@ export default {
 .home {
 	padding-top: 120rpx;
 }
+
 .search {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 120rpx;
-	z-index:999;
+	z-index: 999;
 }
+
 .swiper-banner {
 	width: 100%;
 	height: 330rpx;
+
 	.swiper-list {
 		width: 100%;
+
 		.swiper-item {
 			width: 100%;
+
 			.avatar {
 				width: 100%;
 			}
 		}
 	}
 }
+
 .nav {
 	width: 100%;
 	display: flex;
@@ -129,34 +141,42 @@ export default {
 		width: 120rpx;
 	}
 }
+
 .floor-list {
 	margin-top: 20rpx;
 	width: 100%;
+
 	.floor-title {
 		width: 100%;
 		height: 50rpx;
+
 		.pic {
 			width: 100%;
 		}
 	}
+
 	.floor-content {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
 		margin-top: 20rpx;
+
 		.floor-left {
 			margin-left: 10rpx;
+
 			.floor-pic {
 				border-radius: 20rpx;
 			}
 		}
+
 		.floor-right {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-around;
 			align-items: center;
+
 			.pict {
 				width: 100%;
 				border-radius: 10rpx;

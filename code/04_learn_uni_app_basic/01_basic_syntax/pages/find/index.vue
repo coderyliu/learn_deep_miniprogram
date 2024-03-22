@@ -1,7 +1,8 @@
 <template>
 	<view class="find-wrap">
 		<!-- 导航栏 -->
-		<nav-bar :bar-list="depList" :is-show-total="true" :current-tab="currentTab" @barItemClick="handleBarItemClick"></nav-bar>
+		<nav-bar :bar-list="depList" :is-show-total="true" :current-tab="currentTab"
+			@barItemClick="handleBarItemClick"></nav-bar>
 		<!-- 文章列表 -->
 		<view class="article-list">
 			<template v-for="item in articleList" :key="item.id">

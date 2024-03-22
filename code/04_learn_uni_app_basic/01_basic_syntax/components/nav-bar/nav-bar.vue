@@ -1,8 +1,10 @@
 <template>
 	<scroll-view class="nav-bar-wrap" :scroll-x="true">
-		<view :class="[currentTab === 'all' ? 'bar-item active' : 'bar-item']" v-if="isShowTotal" @click="handleBarItemClick('all')">全部</view>
+		<view :class="[currentTab === 'all' ? 'bar-item active' : 'bar-item']" v-if="isShowTotal"
+			@click="handleBarItemClick('all')">全部</view>
 		<template v-for="item in barList" :key="item.id">
-			<view :class="[currentTab === item.name ? 'bar-item active omit' : 'bar-item omit']" @click="handleBarItemClick(item)">{{ item.name }}</view>
+			<view :class="[currentTab === item.name ? 'bar-item active omit' : 'bar-item omit']"
+				@click="handleBarItemClick(item)">{{ item.name }}</view>
 		</template>
 	</scroll-view>
 </template>
